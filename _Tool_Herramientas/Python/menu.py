@@ -1,14 +1,18 @@
-# menu en python para 5 opciones 
-import os
+'''menu que recibira por parametro:
+un titulo y un apuntador a una tupla que contendra las opciones
+'''
 
-def menu(principal, op1,op2,op3,op4,op5):
+def menu(principal,*opc):
     
     print(" MENU".center(45, "-"))
-    print("\n\t\t -%s- \n"%(principal.upper().title()),
-          "\n\t1- %s"%(op1.capitalize()),
-          "\n\t2- %s"%(op2.capitalize()),
-          "\n\t3- %s"%(op3.capitalize()),
-          "\n\t4- %s"%(op4.capitalize()),
-          "\n\t5- %s"%(op5.capitalize()),)
+    print("\n\t\t -%s- \n"%(principal.upper().title())) # titulo centrado
+    
+    for i in range (len(opc)):            
+        print("\t",i+1,"- ",str(opc[i]).capitalize()) # tabulado con primera letra en mayuscula
     print("".center(45, "-"))
-#menu("principal","uno","dos","tres","cuarto","cinco")
+
+'''
+#Ejemplo
+men=("uno","dos","tres","cuarto","cinco") 
+menu("principal",*men)
+''''
