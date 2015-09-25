@@ -1,0 +1,100 @@
+<Traductor>:	
+
+	BoxLayout:	
+		orientation: 'vertical'	
+		# canvas:			
+		# 	Rectangle:
+	 #            pos: self.pos
+	 #            size: self.size
+		GridLayout:
+			cols: 1
+			rows: 3
+			Label:
+				text: 'REGISTRO PARA USO DE COMPUTADORAS'
+			Label:		
+				text: "GRACIAS POR COMPLETAR "
+			Label:		
+				text: "hora del sistemas"
+		GridLayout:
+			cols: 2
+			rows: 4
+			Label:
+				text: 'NOMBRE: '
+			TextInput:
+				id: nom
+				multiline: False
+				padding:[10,0.5*(self.height - self.line_height)]
+			Label:
+				text: 'CEDULA/PASAPORTE:  '	
+			TextInput:
+				id: iden 
+				multiline: False	
+				padding:[10,0.5*(self.height - self.line_height)]
+			Label:
+				text: 'SEXO:  '	
+			GridLayout:
+				cols:2
+				rows: 2
+				Label:
+			        text: "Femenino"
+				CheckBox:
+			        group: "sexo"
+			    Label:
+			        text: "Masculino"
+				CheckBox:
+			        group: "sexo"	
+		    Label:
+				text: 'USUARIO:  '	
+		    Spinner:
+		    	padding:[10,0.5*(self.height - self.line_height)]
+		        text: "Estudiante"
+		        values: "Estudiante", "Profesor"
+		        size_hint: (None, None)
+        		size: (100, 44)
+		GridLayout:
+			cols: 1			
+			Label:
+				text: 'AREA ACADEMICA ' 
+			GridLayout:
+				cols: 4
+				rows: 4
+				Label:
+			        text: "ACD"
+				CheckBox:
+			        group: "academico"
+			    Label:
+			        text: "DR"
+				CheckBox:
+			        group: "academico"			   
+			    Label:
+			        text: "MP"
+				CheckBox:
+			        group: "academico"
+			    Label:
+			        text: "CA"
+				CheckBox:
+			        group: "academico"
+			    Label:
+			        text: "GLION"
+				CheckBox:
+			        group: "academico"			   
+			    Label:
+			        text: "CS"
+				CheckBox:
+			        group: "academico"
+			    Label:
+			        text: "ING"
+				CheckBox:
+			        group: "academico"
+			    Label:
+			        text: "OTRO"
+				CheckBox:
+			        group: "academico"
+		GridLayout:
+			cols: 2	
+
+			Button:
+				text: 'ACEPTAR'
+			Button:
+				text: 'CANCELAR'	
+		
