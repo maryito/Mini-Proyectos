@@ -6,7 +6,14 @@ from kivy.uix.screenmanager import Screen
 
 
 class Traductor(Screen):
-	pass
+	f = ObjectProperty()
+	m = ObjectProperty()
+	are_aca = ""
+
+	def aceptar(self,):
+		print(self.f.text)
+		print(self.m)
+		print(self.are_aca)
 class BibliotecaApp(App):
 	def build(self):
 		return Traductor()

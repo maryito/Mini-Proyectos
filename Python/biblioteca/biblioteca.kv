@@ -1,12 +1,26 @@
+<Can@canvas.before>:
+    Color:
+        rgba:  (0, 128, 0, 0.7)#(0.2, 0.2, 0.2, 1) 
+    Rectangle:
+        pos: self.pos
+        size: self.size
 <Traductor>:	
-
+	f: _f 
+	m: _m
+	are_aca:""
 	BoxLayout:	
+
 		orientation: 'vertical'	
-		# canvas:			
-		# 	Rectangle:
-	 #            pos: self.pos
-	 #            size: self.size
+		canvas:
+		    Color:
+		        rgba: (0, 0, 255, 0.5)#(0.2, 0.2, 0.2, 1) 
+		    Rectangle:
+		        pos: self.pos
+		        size: self.size		  
+                source: 'faru.noip.me/data/fondo.jpg'
+
 		GridLayout:
+
 			cols: 1
 			rows: 3
 			Label:
@@ -38,10 +52,12 @@
 				Label:
 			        text: "Femenino"
 				CheckBox:
+					id:_f
 			        group: "sexo"
 			    Label:
 			        text: "Masculino"
 				CheckBox:
+					id: _m
 			        group: "sexo"	
 		    Label:
 				text: 'USUARIO:  '	
@@ -62,6 +78,7 @@
 			        text: "ACD"
 				CheckBox:
 			        group: "academico"
+			        on_active: root.are_aca = 'Red'
 			    Label:
 			        text: "DR"
 				CheckBox:
@@ -91,10 +108,16 @@
 				CheckBox:
 			        group: "academico"
 		GridLayout:
+
+			
 			cols: 2	
 
 			Button:
+				background_color: (0, 0, 181/255, 0.7)
 				text: 'ACEPTAR'
+				on_press: 
+					root.aceptar()
 			Button:
+				background_color: (0, 0, 181/255, 0.7)
 				text: 'CANCELAR'	
 		
